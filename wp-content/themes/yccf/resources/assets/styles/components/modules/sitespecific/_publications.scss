@@ -1,0 +1,23 @@
+/** Publications */
+section.publications {
+  p {
+    font-size: em(14);
+  }
+
+  .report {
+    display: block;
+
+    @include phonewide {
+      display: none;
+    }
+  }
+
+  .mobile-report {
+    display: none;
+
+    @include phonewide {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+}

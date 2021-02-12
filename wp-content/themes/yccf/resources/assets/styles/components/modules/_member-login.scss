@@ -1,0 +1,65 @@
+/* WP Members Login */
+#wpmem_login,
+#wpmem_msg {
+  border: 1px solid #f1f1f1;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+
+  form {
+    display: inline-block;
+    padding: 10px 20px 10px 0;
+    width: 100% !important;
+
+    fieldset {
+      margin: 10px;
+
+      legend {
+        color: $yccf_blue;
+        padding-bottom: 10px !important;
+
+        @include mc-h4;
+      }
+
+      label {
+        color: $form-label-color;
+        display: block;
+        font-family: $form-label-font;
+        font-size: em($form-label-size);
+        padding: $form-label-padding;
+      }
+
+      div {
+        width: 100% !important;
+
+        &.button_div {
+          font-size: 13px;
+
+          label {
+            float: left;
+            font-size: em($form-label-size);
+          }
+
+          input[type="checkbox"] {
+            float: left;
+            margin: 7px 5px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#wpmem_msg {
+  background: transparent !important;
+  border-color: $form-error;
+  border-radius: 0;
+  text-align: left !important;
+
+  h2 {
+    @include mc-h4;
+  }
+}

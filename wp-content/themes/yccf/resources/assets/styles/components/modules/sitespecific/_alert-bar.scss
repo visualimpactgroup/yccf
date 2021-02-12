@@ -1,0 +1,40 @@
+/** Alert Bar */
+section.alert-bar {
+  background: #f47420;
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+
+  .alert-title,
+  .alert-content {
+    color: #fff;
+    font-family: $primaryFontStack;
+  }
+
+  .alert-title {
+    font-size: em(18);
+
+    @include desktop {
+      font-size: em(16);
+    }
+  }
+
+  .alert-content {
+    font-size: em(16);
+    padding-bottom: 10px;
+    max-width: 95%;
+
+    @include desktop {
+      font-size: em(14);
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 28px;
+
+      @include desktop {
+        line-height: 24px;
+      }
+    }
+  }
+}

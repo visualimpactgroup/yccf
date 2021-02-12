@@ -1,0 +1,19 @@
+section.resource-content ul.resource-list .resource-content ul li {
+  display: list-item !important;
+  width: 100% !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+.mm-panel,
+.mm-panels,
+.mm-panel_opened {
+  background: #10155e !important;
+}
+
+
+section.about-block .halves .half .half-cont .block-content .logo-circle {
+  background: url(/wp-content/themes/yccf/resources/assets/images/anniversary.png) !important;
+  height: 150px !important;
+  width: 150px !important;
+}

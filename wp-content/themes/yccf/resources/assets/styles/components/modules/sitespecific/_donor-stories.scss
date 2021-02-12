@@ -1,0 +1,100 @@
+/** Donor Stories */
+.stories {
+  .article-title {
+    color: $primary_link;
+    font-size: em(17);
+    font-weight: 500;
+    padding-bottom: 5px;
+    padding-top: 10px;
+  }
+
+  p {
+    font-size: em(15) !important;
+    line-height: 28px !important;
+    padding-bottom: 0 !important;
+  }
+
+  a.more {
+    font-size: em(15) !important;
+
+    &.fr {
+      @include tablet {
+        float: left !important;
+      }
+    }
+  }
+
+  .dual-stories {
+    padding-bottom: 10px;
+
+    a {
+      color: $primary_link;
+
+      &:hover {
+        color: $primary_hover;
+      }
+    }
+
+    .article-subtitle {
+      font-size: em(14);
+    }
+
+    .column.is-6 {
+      &:first-of-type {
+        border-right: 0;
+      }
+    }
+  }
+
+  .no-padding-left {
+    padding-left: 0 !important;
+  }
+}
+
+.other-stories {
+  padding: 20px 0 40px 0;
+
+  h4 {
+    color: $primary_link !important;
+    position: relative;
+    top: 15px;
+  }
+
+  a.more {
+    position: relative;
+    top: 15px;
+
+    @include phonewide {
+      float: left !important;
+      top: 0;
+    }
+  }
+
+  .column.is-story {
+    .columns {
+      border: 1px solid #ccc;
+      display: inline-flex;
+      height: 100%;
+
+      .article-title {
+        font-size: em(17);
+      }
+
+      .article-subtitle {
+        font-size: em(14);
+        font-weight: 600 !important;
+        padding-top: 5px;
+      }
+
+      img {
+        padding-bottom: 4px;
+      }
+
+      a {
+        &:hover {
+          color: $primary_hover;
+        }
+      }
+    }
+  }
+}

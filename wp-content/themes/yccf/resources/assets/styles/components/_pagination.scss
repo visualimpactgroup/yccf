@@ -1,0 +1,27 @@
+/** Pagination */
+nav.pagination {
+  display: block;
+
+  ul.pagination-list {
+    li {
+      display: inline-block;
+      float: left;
+
+      &.ellipsis {
+        padding-top: 3px;
+
+        span {
+          color: #ccc;
+        }
+      }
+
+      &.active,
+      &:hover {
+        a {
+          border-color: #ccc !important;
+          color: #ccc !important;
+        }
+      }
+    }
+  }
+}

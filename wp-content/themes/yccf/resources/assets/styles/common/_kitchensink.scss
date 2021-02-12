@@ -1,0 +1,11 @@
+/** Kitchen Sink Layout */
+.kitchen-sink {
+  .new-section {
+    border-top: 3px solid $primary-border_color;
+    margin: 20px 0 10px 0;
+  }
+
+  .section-title {
+    font-size: em(32);
+  }
+}

@@ -1,0 +1,11 @@
+/** Tables */
+table {
+  thead {
+    tr {
+      th {
+        font-weight: $thead-fw;
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.breadcrumbs {
+  display: inline-block;
+  padding: 15px 0 0 0;
+  width: 100%;
+
+  @include widescreen {
+    padding-left: 5px;
+  }
+
+  span,
+  span [class^="icon-"],
+  span [class*=" icon-"] {
+    color: $breadcrumb-link;
+    font-size: 15px;
+
+    @include widescreen {
+      font-size: 13px;
+    }
+  }
+
+  span [class^="icon-"],
+  span [class*=" icon-"] {
+    margin: 0 5px;
+  }
+
+  a {
+    color: $breadcrumb-link;
+    margin: 0 !important;
+
+    span,
+    span [class^="icon-"],
+    span [class*=" icon-"] {
+      color: $breadcrumb-link;
+      margin: 0 !important;
+    }
+
+    &:hover {
+      color: $breadcrumb-link_hover;
+
+      span {
+        color: $breadcrumb-link_hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@import url('https://s3.amazonaws.com/icomoon.io/141886/VIGIconLibrary/style.css?not2pc&#038;ver=1.0');
+
+body,
+html {
+  height: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+  background-color: $body_background;
+  font-family: $primaryFontStack;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-font-smoothing: subpixel-antialiased;
+  -o-font-smoothing: subpixel-antialiased;
+
+  // &::before {
+  //   content: url('../images/homepage.jpg');
+  //   position: absolute;
+  //   z-index: -1;
+  //   left: -75px;
+  //   opacity: 0.5;
+  //   right: 0;
+  //   top: 0;
+  // }
+}
+
+a {
+  outline: none;
+  transition: all 0.2s linear;
+}
+
+
+
+/** Common Styles */
+p {
+  @include main-paragraph;
+}
+
+p.fineprint {
+  @include fineprint-paragraph;
+}
+
+p.threequarter {
+  @include p-threequarter;
+}
+
+p.onehalf {
+  @include p-onehalf;
+}
+
+p.iscentered {
+  @include p-centered;
+}
+
+.grey-box {
+  background: $oneforty_lightgrey;
+}
+
+.targetContainer {
+  max-width: $maxwidth-cols !important;
+}
+
+/** Common Class Styles */
+a.more,
+a.more-link {
+  color: $more-color;
+  font-weight: $paragraph-fw;
+  position: relative;
+  top: 0;
+
+  @include main-paragraph;
+
+  i {
+    @include main-paragraph;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.move-up {
+  position: relative;
+  top: -25px;
+}
+
+.single-links {
+  position: relative;
+  top: -2px;
+
+  div {
+    display: block;
+
+    a {
+      color: $primary_link;
+      display: inline-block;
+    }
+
+    a.more-link {
+      color: $primary_link;
+      margin-bottom: 0;
+    }
+
+    &::after {
+      @include pseudo;
+
+      clear: both;
+      display: block;
+      position: static;
+    }
+  }
+}
+
+div:active,
+div:focus {
+  outline: none;
+  border: none;
+}
+
+/** Common Alignments */
+.centered-align {
+  text-align: center;
+}
+
+.fl {
+  float: left !important;
+}
+
+.fr {
+  float: right !important;
+}

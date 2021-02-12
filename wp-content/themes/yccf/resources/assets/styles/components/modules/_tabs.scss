@@ -1,0 +1,24 @@
+/** Tabs */
+div#tabs {
+  margin-bottom: 0;
+
+  ul {
+    margin-left: 0;
+  }
+}
+
+#tab-content {
+  div.tab-container {
+    border-top: $tabcontent-border-top $tabcontent-border-style $oneforty_lightgrey;
+    border-right: $tabcontent-border-right $tabcontent-border-style $oneforty_lightgrey;
+    border-bottom: $tabcontent-border-bottom $tabcontent-border-style $oneforty_lightgrey;
+    border-left: $tabcontent-border-left $tabcontent-border-style $oneforty_lightgrey;
+    display: none;
+    margin-top: -15px;
+    padding: 5px 10px;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}

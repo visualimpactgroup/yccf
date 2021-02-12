@@ -1,0 +1,240 @@
+/** Impact */
+section.impact {
+  background: $yccf_green;
+  color: #fff !important;
+  display: inline-block;
+  padding: 20px 0 35px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include touch {
+    padding: 10px 0 15px 0;
+  }
+
+  .impact-title {
+    color: #fff;
+    font-size: em(30);
+    font-weight: 300;
+    padding: 0 0 5px 0;
+
+    strong {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    @include touch {
+      font-size: em(24);
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: em(20);
+    font-weight: 300;
+
+    @include touch {
+      font-size: em(18);
+    }
+
+    strong {
+      color: #fff;
+    }
+  }
+
+  a.Styled {
+    background: transparent;
+    border-color: $white;
+    color: $white;
+    float: right !important;
+    margin-top: 10px;
+
+    &:hover,
+    &:focus {
+      background: $white;
+      border-color: $white;
+      color: $primary_hover;
+    }
+
+    @include touch {
+      float: left !important;
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+  }
+
+  &.news-bar {
+    @include touch {
+      padding-top: 10px;
+    }
+
+    .article-title {
+      color: #fff;
+      font-size: em(20);
+      line-height: 34px;
+      padding-bottom: 5px;
+
+      @include touch {
+        font-size: em(18);
+        line-height: 30px;
+      }
+    }
+
+    .img {
+      display: inline-block;
+      margin-bottom: 10px;
+      width: 100%;
+
+      img {
+        background: #fff;
+        padding: 3px;
+      }
+    }
+
+    .article-date {
+      font-size: em(15);
+      color: #bedcae;
+
+      @include touch {
+        font-size: em(13);
+      }
+    }
+
+    .column {
+      a {
+        &:hover,
+        &:focus {
+          .article-title,
+          .article-date {
+            color: #bedcae;
+          }
+        }
+      }
+    }
+
+    a.more {
+      color: #fff !important;
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      @include touch {
+        margin-top: 5px;
+      }
+
+      @include tablet {
+        float: left !important;
+        margin-top: 0;
+        top: -10px;
+      }
+    }
+  }
+
+  .associated-users {
+    .team-member {
+      border: 1px solid #98cb73;
+      display: inline-block;
+      height: 100%;
+      margin-bottom: 10px;
+      padding: 15px 10px;
+      width: 100%;
+
+      .circled-img {
+        border-radius: 50%;
+        float: left;
+        margin-right: 20px;
+        overflow: hidden;
+        height: 110px;
+        width: 110px;
+        text-align: center;
+        position: relative;
+
+        @include widescreen {
+          height: 90px;
+          width: 90px;
+        }
+
+        @include touch {
+          float: none;
+          margin: 0 auto 10px;
+        }
+
+        img {
+          display: inline-block;
+          height: auto;
+          margin-left: -5%;
+          width: 120%;
+          max-width: 120%;
+        }
+      }
+
+      .block-cont {
+        display: inline-block;
+        float: left;
+        max-width: 65%;
+
+        @include fullhd {
+          max-width: 60%;
+        }
+
+        @include touch {
+          max-width: 100%;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .name {
+        font-size: em(18);
+        padding-bottom: 5px;
+      }
+
+      .title {
+        color: #fff;
+        font-size: em(16);
+        font-weight: 300;
+        line-height: 24px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+
+        @include widescreen {
+          font-size: em(14);
+          line-height: 20px;
+        }
+      }
+
+      ul.contact-info {
+        margin: 0;
+
+        li {
+          color: #fff;
+          font-size: em(16);
+          font-weight: 300;
+
+          @include widescreen {
+            font-size: em(14);
+          }
+
+          [class^="icon-"],
+          [class*=" icon-"] {
+            font-size: 14px;
+            position: relative;
+            top: 1px;
+            margin-right: 4px;
+
+            @include widescreen {
+              font-size: 13px;
+              margin-left: 2px;
+            }
+          }
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+/** Px to Em */
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+/** Margin Auto */
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+/** Clearfix */
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+
+/** Before & After Pseudo Elements */
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+div::after {
+  @include pseudo;
+
+  top: -1rem;
+  left: -1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+/** Strong */
+@mixin strong-para {
+  strong {
+    color: inherit;
+    font-weight: auto;
+  }
+}
+
+/** Images */
+@mixin img-defaults {
+  box-shadow: $img-shadow;
+}
+
+/** Vertical Centering */
+@mixin vertical-centering {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/** Vertical & Horizontal Centering */
+@mixin total-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "mixins/typography-mixins";
+@import "mixins/button-mixins";
+@import "mixins/navigation-mixins";
+@import "mixins/list-mixins";
+@import "mixins/icon-mixins";
+@import "mixins/form-mixins";
+@import "mixins/animation-mixins";

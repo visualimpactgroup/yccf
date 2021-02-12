@@ -1,0 +1,38 @@
+/** Compliancy */
+.screen-reader-text {
+  display: none;
+
+  .skip-navigation {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.skip-link {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 2px 2px hsla(0, 0%, 4%, 0.6);
+  box-shadow: 0 0 2px 2px hsla(0, 0%, 4%, 0.6);
+  color: #b64a64;
+  display: block;
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: auto;
+  left: 6px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  position: absolute;
+  text-decoration: none;
+  top: -100px;
+  -webkit-transition: top 0.75s ease-out;
+  -o-transition: top 0.75s ease-out;
+  transition: top 0.75s ease-out;
+  width: auto;
+  z-index: 100000;
+
+  &:focus {
+    top: 0;
+    overflow: visible;
+  }
+}

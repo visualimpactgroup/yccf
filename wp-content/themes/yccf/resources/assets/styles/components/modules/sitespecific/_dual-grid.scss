@@ -1,0 +1,37 @@
+/** Endowment FAQs */
+section.dual-grid {
+  display: inline-block;
+  border-top: 1px solid $primary-divirder_color;
+  width: 100%;
+
+  .column.is-6 {
+    &:first-of-type {
+      border-right: 1px solid $primary-divirder_color;
+
+      @include phonewide {
+        border-right: 0;
+      }
+    }
+
+    &:last-of-type {
+      .cont {
+        float: right;
+
+        @include phonewide {
+          float: left;
+          padding: 10px 0 0 0;
+        }
+      }
+    }
+
+    .cont {
+      display: inline-block;
+      padding: 20px 0 30px 0;
+      width: 95%;
+
+      @include phonewide {
+        width: 100%;
+      }
+    }
+  }
+}

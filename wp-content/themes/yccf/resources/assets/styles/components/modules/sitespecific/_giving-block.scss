@@ -1,0 +1,126 @@
+/** Giving Block */
+section.giving-block,
+.charitable-slide {
+  background: $yccf_blue;
+  color: #fff;
+  margin: 20px 0 30px 0;
+  padding: 20px 0 30px 0;
+  position: relative;
+  text-align: center;
+
+  @include touch {
+    margin: 10px 0 20px 0;
+    padding: 10px 0 20px 0;
+  }
+
+  @include phonewide {
+    margin: 5px 0 10px 0;
+    padding: 5px 0 10px 0;
+  }
+
+  h3 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .type-icon {
+    background: #fff;
+    border-radius: 50%;
+    height: 100px;
+    margin: 0 auto 20px;
+    width: 100px;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $primary_link;
+      font-size: em(70);
+
+      @include touch {
+        font-size: em(50);
+      }
+    }
+
+    @include vertical-centering;
+  }
+
+  .type-title {
+    font-family: $primaryFontStack;
+    font-size: em(20);
+    line-height: 24px;
+
+    @include touch {
+      font-size: em(18);
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: em(16);
+    line-height: 32px;
+    padding-top: 10px;
+
+    @include touch {
+      font-size: em(15);
+      line-height: 28px;
+
+      br {
+        display: none;
+      }
+    }
+
+    a {
+      color: #ccc;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .icon-columns {
+    position: relative;
+    text-align: center;
+  }
+}
+
+.site-container {
+  .charitable-slide {
+    h3 {
+      @include widescreen {
+        font-size: em(22) !important;
+        margin-bottom: 10px;
+        margin-top: 0 !important;
+      }
+    }
+
+    .icon-columns {
+      .column {
+        .type-icon {
+          @include widescreen {
+            height: 80px;
+            width: 80px;
+          }
+
+          [class^="icon-"],
+          [class*=" icon-"] {
+            font-size: em(65);
+
+            @include touch {
+              font-size: em(45);
+            }
+          }
+        }
+
+        p {
+          @include touch {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @include phonewide {
+      display: none !important;
+    }
+  }
+}

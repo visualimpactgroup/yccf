@@ -1,0 +1,621 @@
+/** Hero */
+section.hero {
+  background: $yccf_blue;
+  border-bottom: 3px solid #fff;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: -18px;
+  position: relative;
+  width: 100%;
+
+  @include desktop {
+    max-height: 540px;
+  }
+
+  .shaded {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.blueshade {
+      background: $yccf_blue;
+      z-index: -1;
+    }
+  }
+
+  .main-img {
+    display: block;
+    margin: 0 auto -10px;
+    text-align: center;
+  }
+
+  &.bottom-shadow {
+    background: url(../images/bottom-shadow.png) repeat-x bottom center;
+  }
+
+  .fade {
+    position: relative;
+  }
+
+  &.internal-hero {
+    .columns {
+      left: 0;
+      padding: 215px 0 200px 0;
+      position: absolute;
+      right: 0;
+      z-index: 10;
+      width: 100%;
+
+      @include maxx {
+        padding: 180px 0 200px 0;
+      }
+
+      @include fullhd {
+        padding: 150px 0;
+      }
+
+      @include desktop {
+        padding: 60px 0;
+      }
+
+      @include phonewide {
+        padding: 30px 0;
+      }
+
+      @include oddphone {
+        padding: 20px 0;
+      }
+
+      h1 {
+        color: #fff;
+        font-size: em(46);
+        font-weight: 500;
+        line-height: 54px;
+        text-transform: uppercase;
+
+        @include maxx {
+          font-size: em(42);
+          line-height: 50px;
+        }
+
+        @include fullhd {
+          font-size: em(38);
+          line-height: 42px;
+        }
+
+        @include widescreen {
+          font-size: em(34);
+        }
+
+        @include phonewide {
+          font-size: em(30);
+          line-height: 34px;
+        }
+
+        @include oddphone {
+          font-size: em(20);
+          line-height: 26px;
+        }
+      }
+
+      p {
+        color: #fff;
+        font-size: em(33);
+        font-weight: 400;
+        line-height: 50px;
+
+        @include maxx {
+          font-size: em(30);
+          line-height: 44px;
+        }
+
+        @include fullhd {
+          line-height: 38px;
+        }
+
+        @include widescreen {
+          font-size: em(22);
+          line-height: 32px;
+        }
+
+        @include phonewide {
+          padding-top: 5px;
+        }
+
+        @include oddphone {
+          font-size: em(16);
+          font-weight: 300;
+          line-height: 22px;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto -10px;
+    }
+  }
+
+  .colored {
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &.hero-xl {
+    .columns {
+      text-align: center;
+
+      .positioned-img {
+        @include maxx {
+          position: relative;
+          top: -50px;
+        }
+
+        @include widescreen {
+          top: -70px;
+          max-width: 50%;
+        }
+
+        @include touch {
+          top: -50px;
+          max-width: 40%;
+        }
+
+        @include phonewide {
+          top: -10px;
+        }
+      }
+
+      .circles {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+
+        span {
+          background: $circle;
+          border-radius: 50%;
+
+          &:first-of-type {
+            display: inline-block;
+            height: 325px;
+            margin-left: -18%;
+            position: absolute;
+            width: 325px;
+            top: 28%;
+            z-index: -1;
+
+            @include maxx {
+              top: 20%;
+            }
+
+            @include widescreen {
+              height: 265px;
+              width: 265px;
+            }
+
+            @include touch {
+              height: 225px;
+              margin-left: -25%;
+              top: 5%;
+              width: 225px;
+            }
+
+            @include oddphone {
+              height: 150px;
+              top: 0%;
+              width: 150px;
+            }
+          }
+
+          &:last-of-type {
+            display: inline-block;
+            height: 200px;
+            margin-right: -5%;
+            position: absolute;
+            width: 200px;
+            top: 45%;
+            z-index: -2;
+
+            @include maxx {
+              top: 40%;
+            }
+
+            @include widescreen {
+              height: 150px;
+              width: 150px;
+              top: 35%;
+            }
+
+            @include touch {
+              top: 25%;
+            }
+          }
+        }
+      }
+    }
+
+    .colored {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    h1.misaligned {
+      text-indent: -9999px;
+    }
+  }
+
+  .hero-bottom-shadow {
+    background: url(../images/bottom-shadow.png) repeat-x bottom center;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  button.slick-arrow {
+    background: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 50px;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    @include minimaxx {
+      font-size: 40px;
+    }
+
+    @include oddphone {
+      font-size: 20px;
+      top: 30%;
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &.slick-prev {
+      left: 10px;
+
+      @include minimaxx {
+        left: 0;
+      }
+    }
+
+    &.slick-next {
+      right: 10px;
+
+      @include minimaxx {
+        right: 0;
+      }
+    }
+  }
+}
+
+.slick-track {
+  position: relative;
+  z-index: 1;
+
+  .slick-slide {
+    .main-img {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.circles-main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+
+  span {
+    background: $circle;
+    border-radius: 50%;
+    text-align: center;
+
+    img {
+      left: 50px;
+      position: relative;
+      top: 20px;
+
+      @include maxx {
+        left: 30px;
+        top: 10px;
+        max-width: 80%;
+      }
+
+      @include minimaxx {
+        left: 50px;
+      }
+
+      @include widescreen {
+        top: 20px;
+      }
+
+      @include phonewide {
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+        top: 0;
+        max-width: 220px;
+      }
+
+      @include oddphone {
+        max-width: 180px;
+      }
+    }
+
+    &:first-of-type {
+      background: rgba(106, 180, 53, 0.7);
+      display: inline-block;
+      height: 500px;
+      position: relative;
+      width: 500px;
+      top: 30%;
+      z-index: -1;
+
+      @include maxx {
+        height: 450px;
+        top: 30%;
+        width: 450px;
+      }
+
+      @include minimaxx {
+        height: 400px;
+        top: 27%;
+        width: 400px;
+      }
+
+      @include widescreen {
+        height: 300px;
+        top: 30%;
+        width: 300px;
+      }
+
+      @include touch {
+        top: 0;
+      }
+
+      @include phonewide {
+        background: rgba(106, 180, 53, 0.5);
+        border-radius: 0;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      a {
+        @include phonewide {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    &:last-of-type {
+      background: rgba(18, 19, 97, 0.8);
+      display: inline-block;
+      height: 155px;
+      margin-left: -10%;
+      position: relative;
+      text-align: center;
+      width: 155px;
+      top: 25%;
+      z-index: 1;
+
+      &:hover {
+        background: rgba(18, 19, 97, 0.4);
+        transform: scale(1.1);
+        transition: all 0.5s;
+      }
+
+      @include maxx {
+        height: 135px;
+        top: 35%;
+        width: 135px;
+      }
+
+      @include widescreen {
+        height: 125px;
+        top: 55%;
+        width: 125px;
+      }
+
+      @include touch {
+        top: 8%;
+      }
+
+      @include phonewide {
+        display: none;
+        // background: transparent;
+        // border-radius: 0;
+        // bottom: 0;
+        // display: block;
+        // height: 100%;
+        // margin: 10px auto;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // width: 100%;
+      }
+    }
+
+    a.link {
+      color: #fff;
+      font-size: em(17);
+      left: 50%;
+      position: absolute;
+      text-transform: uppercase;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      width: 200%;
+      z-index: 5;
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        margin-left: 4px;
+        position: relative;
+        top: 1px;
+      }
+
+      @include minimaxx {
+        font-size: em(15);
+      }
+
+      @include widescreen {
+        font-size: em(13);
+      }
+
+      @include phonewide {
+        bottom: 30px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: auto;
+        transform: none;
+        width: 100%;
+      }
+
+      @include oddphone {
+        display: none;
+      }
+    }
+  }
+}
+
+.site-container {
+  .vid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+
+    video {
+      background-color: black;
+      transform: scale(1.2);
+    }
+  }
+
+  .promotional-slide {
+    text-align: center;
+
+    .columns {
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 100;
+
+      .main-text {
+        color: #fff !important;
+        font-size: em(54);
+        line-height: em(24);
+        text-align: center;
+        position: relative;
+        margin-top: 20%;
+
+        @include widescreen {
+          font-size: em(40);
+          line-height: em(18);
+        }
+
+        @include phonewide {
+          font-size: em(26);
+          line-height: em(22);
+          margin-top: 3%;
+        }
+
+        @include oddphone {
+          font-size: em(20);
+          line-height: em(22);
+          margin-top: -1%;
+        }
+
+        strong {
+          color: #fff !important;
+          font-weight: $bold;
+        }
+      }
+
+      .link {
+        color: #fff;
+        display: inline-block;
+        font-size: em(26);
+        margin: 15px auto 0;
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+          font-size: em(12);
+          margin-left: 4px;
+          position: relative;
+          top: 1px;
+
+          @include phonewide {
+            font-size: em(12);
+            top: -2px;
+          }
+
+          @include oddphone {
+            font-size: em(10);
+          }
+        }
+
+        @include phonewide {
+          font-size: em(18);
+          line-height: em(12);
+          margin-top: 3%;
+        }
+
+        @include oddphone {
+          font-size: em(16);
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .charitable-slide {
+    h3 {
+      font-size: em(34);
+      margin-top: 5%;
+    }
+  }
+}

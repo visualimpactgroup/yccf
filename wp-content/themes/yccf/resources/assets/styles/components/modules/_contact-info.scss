@@ -1,0 +1,96 @@
+/** CInfo */
+.main-content {
+  ul.cinfo {
+    @include listDefaults;
+
+    list-style-type: none;
+    margin-left: 30px !important;
+
+    @include widescreen {
+      margin-left: 33px !important;
+    }
+
+    @include phonewide {
+      margin-left: 28px !important;
+    }
+
+    li {
+      font-weight: 400;
+
+      a {
+        color: $yccf_blue;
+      }
+
+      &.double-line {
+        [class^="icon-"],
+        [class*=" icon-"] {
+          font-size: em(18);
+          left: -28px;
+          position: absolute;
+          top: 6px;
+
+          @include widescreen {
+            font-size: em(16);
+            left: -28px;
+            top: 6px;
+          }
+
+          @include phonewide {
+            font-size: em(18);
+            left: -28px;
+            top: 5px;
+          }
+        }
+      }
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        font-size: em(18);
+        left: -28px;
+        position: absolute;
+        top: 3px;
+
+        @include widescreen {
+          font-size: em(16);
+          left: -28px;
+          top: 1px;
+        }
+
+        @include phonewide {
+          font-size: em(16);
+          left: -28px;
+          top: 1px;
+        }
+      }
+
+      margin-bottom: 12px;
+      position: relative;
+
+      @include widescreen {
+        margin-bottom: 10px;
+      }
+
+      @include phonewide {
+        margin-bottom: 8px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    li.address-list {
+      &::before {
+        top: 8px;
+
+        @include widescreen {
+          top: 6px;
+        }
+
+        @include phonewide {
+          top: 3px;
+        }
+      }
+    }
+  }
+}

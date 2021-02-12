@@ -1,0 +1,12 @@
+/** Gallery */
+.gallery-section {
+  img {
+    box-shadow: $img-shadow2;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+      box-shadow: $img-shadow2_hover;
+    }
+  }
+}

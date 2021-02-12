@@ -1,0 +1,262 @@
+/** Search form */
+.search-form {
+  @extend .field, .has-addons;
+}
+
+.search-form label {
+  @extend .control;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .input;
+
+  border-radius: 0 !important;
+}
+
+.search-form .search-submit {
+  @extend .button, .is-info;
+}
+
+.form-classes {
+  padding-bottom: 30px;
+
+  .form-title {
+    color: $form-title-color;
+    font-size: em($form-title);
+    font-weight: $form-title-weight;
+  }
+
+  .field {
+    position: relative;
+
+    label,
+    .input-label {
+      color: $form-label-color;
+      display: block;
+      font-family: $form-label-font;
+      font-size: em($form-label-size);
+      padding: $form-label-padding;
+
+      span {
+        display: inline-block;
+
+        &.use-floating-validation-tip,
+        &.wpcf7-form-control-wrap {
+          width: 100%;
+        }
+      }
+
+      span.req {
+        color: $form-error;
+      }
+
+      span.ex {
+        color: $form-example-color;
+        font-size: em($form-example-size);
+        font-style: $form-example-style;
+        padding-left: 5px;
+      }
+
+      span.info {
+        color: $form-info-color;
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    .select-style,
+    textarea {
+      background: $form-input-bg;
+      border: $form-input-b;
+      box-shadow: $form-input-boxshadow;
+      color: $form-input-color;
+      font-family: $form-input-font;
+      font-size: em($form-input-fontsize);
+      padding: $form-input-padding;
+      outline: none;
+      resize: none;
+      transition: all 0.2s linear;
+      width: 100%;
+
+      &:focus,
+      &:active {
+        background-color: $form-input-bg_hover;
+        border-color: $form-input-bcolor_active;
+        box-shadow: $form-input-boxshadow_active;
+      }
+
+      &:hover {
+        background-color: $form-input-bg_hover;
+        border-color: $form-input-bcolor_hover;
+        box-shadow: $form-input-boxshadow_hover;
+      }
+    }
+
+    /** Custom Checkboxes */
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked,
+    [type="radio"]:not(:checked),
+    [type="radio"]:checked {
+      position: absolute;
+      left: -9999px;
+    }
+
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+      color: $form-label-color;
+      cursor: pointer;
+      display: inline-block;
+      font-size: em($checkbox-label-fsize);
+      padding-left: $checkbox-label-pleft;
+      position: relative;
+    }
+
+    /* checkbox aspect */
+    [type="checkbox"]:not(:checked) + label::before,
+    [type="checkbox"]:checked + label::before {
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 2px;
+      width: $checkbox-width;
+      height: $checkbox-height;
+      border: $checkbox-b;
+      background: $checkbox-bg;
+      border-radius: $checkbox-b-radius;
+      box-shadow: $checkbox-boxshadow;
+    }
+
+    /* checked mark aspect */
+    [type="checkbox"]:not(:checked) + label::after,
+    [type="checkbox"]:checked + label::after {
+      content: $checkmark;
+      position: absolute;
+      top: 4px;
+      left: 8px;
+      font-size: em($checkmark-size);
+      color: $checkmark-color;
+      transition: $checkmark-transition;
+    }
+
+    /* checked mark aspect changes */
+    [type="checkbox"]:not(:checked) + label::after,
+    [type="radio"]:not(:checked) + label::after {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    [type="checkbox"]:checked + label::after,
+    [type="radio"]:checked + label::after {
+      opacity: 1;
+
+      @include animation(boom 0.5s ease);
+    }
+
+    /* disabled checkbox */
+    [type="checkbox"]:disabled:not(:checked) + label::before,
+    [type="checkbox"]:disabled:checked + label::before {
+      box-shadow: none;
+      border: $checkbox-b_disabled;
+      background-color: $checkbox-bg_disabled;
+    }
+
+    [type="checkbox"]:disabled:checked + label::after {
+      color: $checkmark-color_disabled;
+    }
+
+    [type="checkbox"]:disabled + label {
+      color: $checkmark-color_disabled;
+    }
+
+    /* accessibility
+    [type="checkbox"]:checked:focus + label::before,
+    [type="checkbox"]:not(:checked):focus + label::before {
+      border: 2px dotted blue;
+    }
+    */
+
+    /* radio button */
+    [type="radio"]:not(:checked) + label,
+    [type="radio"]:checked + label {
+      color: $form-label-color;
+      cursor: pointer;
+      display: inline-block;
+      font-size: em($radio-label-fsize);
+      padding-left: $radio-label-pleft;
+      position: relative;
+    }
+
+    /* radio button aspect */
+    [type="radio"]:not(:checked) + label::before,
+    [type="radio"]:checked + label::before {
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 7px;
+      width: $radio-width;
+      height: $radio-height;
+      border: $radio-b;
+      background: $radio-bg;
+      border-radius: $radio-b-radius;
+    }
+
+    /* radio button aspect */
+    [type="radio"]:not(:checked) + label::after,
+    [type="radio"]:checked + label::after {
+      content: $radio;
+      position: absolute;
+      top: -2px;
+      left: 3px;
+      font-size: em($radio-size);
+      color: $radio-color;
+      transition: $radio-transition;
+    }
+
+    .select-style {
+      overflow: hidden;
+      position: relative;
+
+      select {
+        background: transparent;
+        border: 0;
+        color: $form-input-color;
+        display: flex;
+        flex-direction: column;
+        font-family: $form-input-font;
+        font-size: em($form-input-fontsize);
+        justify-content: center;
+        outline: none;
+        margin-left: -7px;
+        position: relative;
+        width: 110% !important;
+        z-index: 10;
+      }
+
+      &::after {
+        border: 1px solid;
+        bottom: 25%;
+        height: 20px;
+        left: auto;
+        position: absolute;
+        right: 10px;
+        top: 25%;
+        width: 20px;
+        z-index: 1;
+      }
+    }
+  }
+
+  textarea {
+    background: #fff !important;
+    min-height: 220px;
+  }
+}
+
+@include keyframes(boom) {
+  25% {
+    transform: scale(1.25);
+  }
+}

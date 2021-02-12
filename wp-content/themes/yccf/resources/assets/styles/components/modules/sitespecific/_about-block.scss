@@ -1,0 +1,227 @@
+/** Homepage About Block & Double Blocks */
+section.about-block,
+section.double-block,
+section.vision-block {
+  background: #fff;
+  display: block;
+  width: 100%;
+
+  @include widescreen {
+    margin-top: -10px;
+  }
+
+  @include touch {
+    margin-top: -15px;
+  }
+
+  &:last-of-type {
+    .halves {
+      .block-content {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .halves {
+    display: flex;
+    max-width: 100% !important;
+
+    .half {
+      float: left;
+      flex: 1;
+
+      @include touch {
+        width: 100% !important;
+      }
+
+      &.fs-img {
+        background-size: cover;
+
+        @include touch {
+          display: none;
+        }
+      }
+
+      .half-cont {
+        display: block;
+        padding: 40px 0 0 20px;
+
+        @include widescreen {
+          padding: 20px 0 0 10px;
+        }
+
+        .block-content {
+          margin: 0 0 0 10px;
+          position: relative;
+          text-align: left;
+          max-width: 680px;
+          width: 100%;
+
+          @include touch {
+            border-bottom: 1px solid #f1f1f1;
+            margin: 0;
+            max-width: 100%;
+          }
+
+          h2 {
+            color: $yccf_blue;
+            font-size: em(24);
+            padding-bottom: 10px;
+          }
+
+          .mission-title {
+            color: $yccf_blue;
+            display: inline-block;
+            font-weight: 600;
+            font-size: em(22);
+            padding-top: 10px;
+          }
+
+          p {
+            margin: 0 0 10px 0;
+            max-width: 97%;
+          }
+        }
+      }
+
+      .button-block {
+        margin-bottom: 25px;
+
+        @include phonewide {
+          margin-bottom: 15px;
+
+          a.more.Styled {
+            display: block;
+            margin: 0 0 10px 0;
+          }
+        }
+      }
+    }
+
+    .column.is-paddingless {
+      @include touch {
+        .half-cont {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  &.even-block {
+    .halves {
+      .half {
+        .half-cont {
+          padding-left: 10px;
+
+          @include touch {
+            padding-left: 10px;
+          }
+
+          .block-content {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.about-block {
+  /*
+  border-bottom: 10px solid #fff;
+  */
+
+  .halves {
+    .half {
+      @include touch {
+        width: 100%;
+      }
+
+      &.fs-img {
+        @include touch {
+          display: none;
+        }
+      }
+
+      .half-cont {
+        padding: 80px 0;
+
+        @include widescreen {
+          padding: 40px 0 20px 0;
+        }
+
+        .block-content {
+          text-align: center;
+
+          @include touch {
+            padding-right: 20px !important;
+            max-width: 100% !important;
+          }
+
+          .logo-circle {
+            background: url(../images/circle-block.jpg) no-repeat top center;
+            height: 80px;
+            margin: 0 auto 20px;
+            width: 80px;
+          }
+
+          h1 {
+            color: $primary_link;
+            font-size: em(34);
+            line-height: 50px;
+
+            @include fullhd {
+              font-size: em(28);
+              line-height: 40px;
+            }
+
+            strong {
+              color: $yccf_blue;
+              font-weight: 600;
+            }
+          }
+
+          .divider {
+            background: url(../images/divider.jpg) no-repeat top center;
+            height: 15px;
+            margin: 20px auto 35px;
+            width: 200px;
+          }
+
+          p {
+            color: $yccf_blue;
+            font-size: em(19);
+            font-weight: 300;
+            line-height: 40px;
+            margin: 0 auto 25px;
+            max-width: 65%;
+
+            @include fullhd {
+              font-size: em(17);
+              line-height: 36px;
+            }
+
+            @include tablet {
+              max-width: 95%;
+            }
+
+            strong {
+              color: $primary_link;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section.double-block {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+
+.main-content.ept {
+  padding-top: 10px;
+}

@@ -1,0 +1,56 @@
+/** Social Media Links */
+.social-media {
+  display: inline-block;
+  padding: 15px 0 0 0;
+
+  ul {
+    display: inline-block;
+    margin: 0;
+
+    li {
+      align-items: center;
+      background: $social-shape-background;
+      border: $social-shape-border;
+      border-radius: $social-shape;
+      display: flex;
+      float: $social-shape-float;
+      height: $social-shape-height;
+      justify-content: center;
+      margin: 0 15px 0 0;
+      text-align: center;
+      width: $social-shape-width;
+
+      a {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      a [class^="icon-"],
+      a [class*=" icon-"],
+      [class^="icon-"],
+      [class*=" icon-"] {
+        color: $social-icon-color;
+        font-size: $social-icon-size;
+      }
+
+      &:hover,
+      &:focus {
+        background: $social-shape-background_hover;
+        border-color: $social-shape-border_hover;
+        cursor: pointer;
+
+        a [class^="icon-"],
+        a [class*=" icon-"],
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: $social-icon-color_hover;
+        }
+      }
+    }
+  }
+}

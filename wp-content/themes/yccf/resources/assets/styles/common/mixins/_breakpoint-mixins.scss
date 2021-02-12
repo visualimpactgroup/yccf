@@ -1,0 +1,81 @@
+/** Breakpoint Mixins */
+// $breakpoints: (
+//   "phone-vert":   400px,
+//   "phone-wide":   480px,
+//   "phone":        768px,
+//   "tablet":       769px,
+//   "desktop":      1024px,
+//   "desktop-wide": 1216px,
+//   "desktop-hd":   1408px
+// );
+@mixin maxx {
+  @media only screen and (max-width: $maxx) {
+    @content;
+  }
+}
+
+@mixin minimaxx {
+  @media only screen and (max-width: $minimaxx) {
+    @content;
+  }
+}
+
+@mixin fullhd {
+  @media only screen and (max-width: $fullhd) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media only screen and (max-width: $widescreen) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin touch {
+  @media only screen and (max-width: $touch) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tabletwide) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin phonewide {
+  @media only screen and (max-width: $phonewide) {
+    @content;
+  }
+}
+
+@mixin phonewde {
+  @media only screen and (max-width: $phonewde) {
+    @content;
+  }
+}
+
+@mixin oddphone {
+  @media only screen and (max-width: $oddphone) {
+    @content;
+  }
+}
+
+@mixin phonevert {
+  @media only screen and (max-width: $phoneVert) {
+    @content;
+  }
+}

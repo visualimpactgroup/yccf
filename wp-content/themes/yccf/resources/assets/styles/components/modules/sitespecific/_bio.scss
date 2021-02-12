@@ -1,0 +1,45 @@
+/* Bio Content */
+.main-content.bio-block {
+  padding: 20px 0;
+
+  h1 {
+    color: $primary_link;
+    display: inline-block;
+    padding-bottom: 15px !important;
+
+    @include mc-h2;
+  }
+
+  .contact-info {
+    padding: 5px 0 15px 0;
+
+    .cblock {
+      display: inline-block;
+      padding-right: 10px;
+
+      [class^="icon-"] {
+        margin-right: 3px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  figure.profile-photo {
+    border: 1px solid #f1f1f1;
+    display: block;
+    float: right;
+    margin: 0 0 15px 15px;
+    padding: 5px;
+    max-width: 250px;
+
+    @include phonewide {
+      float: left;
+      margin: 0 0 15px 0;
+    }
+
+    img {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+/** Page Specific Overrides */
+body.page-template-custom-landing-page {
+  .impact {
+    margin-top: -20px;
+  }
+}
+
+body.single-post,
+body.archive-data,
+body.search-results,
+body.error404,
+body.committee-template-default {
+  header {
+    border-bottom: 2px solid $table-foot-cell-color;
+    position: relative;
+  }
+}
+
+
+.block-content.backed-up {
+  left: -10px;
+  position: relative;
+  top: -20px;
+
+  @include fullhd {
+    left: 0;
+  }
+
+  h2 {
+    font-size: em(26) !important;
+    font-weight: 500;
+  }
+}

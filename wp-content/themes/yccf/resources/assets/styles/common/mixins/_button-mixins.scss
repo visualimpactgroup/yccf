@@ -1,0 +1,220 @@
+/* Button Mixin */
+@mixin remove-btn-defaults {
+  button,
+  input[type="submit"],
+  input[type="reset"] {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    outline: inherit;
+    padding: 0;
+  }
+}
+
+@mixin headerButton {
+  font-family: $primaryFontStack;
+
+  @if $headerButton-padding {
+    padding: $headerButton-padding;
+  }
+
+  @if $headerButton-radius {
+    border-radius: $headerButton-radius;
+  }
+
+  @if $headerButton-font-size {
+    font-size: em($headerButton-font-size);
+  }
+
+  @if $headerButton-bg-color {
+    background-color: $headerButton-bg-color;
+  }
+
+  @if $headerButton-font-weight {
+    font-weight: $headerButton-font-weight;
+  }
+
+  @if $headerButton-line-height {
+    line-height: $headerButton-line-height;
+  }
+
+  @if $headerButton-float {
+    float: $headerButton-float;
+  }
+
+  @if $headerButton-border {
+    border: $headerButton-border;
+  }
+
+  @if $headerButton-display {
+    display: $headerButton-display;
+  }
+
+  @if $headerButton-link-color {
+    color: $headerButton-link-color;
+  }
+
+  &:hover {
+    @if $headerButton-bg-color_hover {
+      background: $headerButton-bg-color_hover;
+    }
+
+    @if $headerButton-border_hover {
+      border: $headerButton-border_hover;
+    }
+
+    @if $headerButton-link-color_hover {
+      color: $headerButton-link-color_hover;
+    }
+  }
+
+  @include widescreen {
+    @if $headerButton-padding-size2 {
+      padding: $headerButton-padding-size2;
+    }
+
+    @if $headerButton-radius-size2 {
+      border-radius: $headerButton-radius-size2;
+    }
+
+    @if $headerButton-font-size-size2 {
+      font-size: em($headerButton-font-size-size2);
+    }
+  }
+
+  @include phonewide {
+    @if $headerButton-padding-size3 {
+      padding: $headerButton-padding-size3;
+    }
+
+    @if $headerButton-radius-size3 {
+      border-radius: $headerButton-radius-size3;
+    }
+
+    @if $headerButton-font-size-size3 {
+      font-size: em($headerButton-font-size-size3);
+    }
+  }
+}
+
+
+@mixin subCTA {
+  font-family: $primaryFontStack;
+
+  @if $subButton-padding {
+    padding: $subButton-padding;
+  }
+
+  @if $subButton-radius {
+    border-radius: $subButton-radius;
+  }
+
+  @if $subButton-font-size {
+    font-size: em($subButton-font-size);
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      font-size: em($subButton-icon-size);
+      margin-left: 3px;
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  @if $subButton-bg-color {
+    background-color: $subButton-bg-color;
+  }
+
+  @if $headerButton-font-weight {
+    font-weight: $headerButton-font-weight;
+  }
+
+  @if $headerButton-line-height {
+    line-height: $headerButton-line-height;
+  }
+
+  @if $subButton-float {
+    float: $subButton-float;
+  }
+
+  @if $subButton-border {
+    border: $subButton-border;
+  }
+
+  @if $headerButton-display {
+    display: $headerButton-display;
+  }
+
+  @if $subButton-link-color {
+    color: $subButton-link-color;
+  }
+
+  &:hover {
+    @if $subButton-border_hover {
+      border: $subButton-border_hover;
+    }
+
+    @if $subButton-link-color_hover {
+      color: $subButton-link-color_hover;
+    }
+  }
+
+  @include desktop {
+    @if $subButton-padding-size2 {
+      padding: $subButton-padding-size2;
+    }
+
+    @if $subButton-radius-size2 {
+      border-radius: $subButton-radius-size2;
+    }
+
+    @if $subButton-font-size-size2 {
+      font-size: em($subButton-font-size-size2);
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        font-size: em($subButton-icon-size-size2);
+        top: 1px;
+      }
+    }
+  }
+
+  @include phonewide {
+    @if $subButton-padding-size3 {
+      padding: $subButton-padding-size3;
+    }
+
+    @if $subButton-radius-size3 {
+      border-radius: $subButton-radius-size3;
+    }
+
+    @if $subButton-font-size-size3 {
+      font-size: em($subButton-font-size-size3);
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        font-size: em($subButton-icon-size-size3);
+        top: 1px;
+      }
+    }
+  }
+}
+
+@mixin button-block {
+  @include phonewide {
+    a,
+    button,
+    .btn {
+      clear: both;
+      margin-right: 0;
+
+      &::after {
+        content: attr(div);
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

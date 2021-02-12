@@ -1,0 +1,11 @@
+/** List Mixins */
+@mixin listDefaults {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  li {
+    padding: 0;
+  }
+}

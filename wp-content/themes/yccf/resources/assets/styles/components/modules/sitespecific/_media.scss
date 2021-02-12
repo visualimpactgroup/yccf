@@ -1,0 +1,33 @@
+/* Media */
+section.media-center {
+  padding-bottom: 30px;
+}
+
+.video-block {
+  background: #000;
+  display: inline-block;
+  margin-bottom: 10px;
+  position: relative;
+
+  @include total-centered;
+
+  [class^="icon-"] {
+    color: #fff;
+    font-size: em(140);
+    position: absolute;
+    z-index: 5;
+  }
+
+  img {
+    opacity: 0.7;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    [class^="icon-"] {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}

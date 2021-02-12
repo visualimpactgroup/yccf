@@ -1,0 +1,511 @@
+/** Typography */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/** Font Defaults */
+@mixin mc-h1 {
+  font-family: $primaryFontStack;
+
+  @if $mc-h1-size {
+    font-size: em($mc-h1-size);
+  }
+
+  @if $mc-h1-fw {
+    font-weight: $mc-h1-fw;
+  }
+
+  @if $mc-h1-lh {
+    line-height: em($mc-h1-lh);
+  }
+
+  @if $mc-h1-pad {
+    padding: $mc-h1-pad;
+  }
+
+  @if $mc-h1-mar {
+    margin: $mc-h1-mar;
+  }
+
+  @include desktop {
+    @if $mc-h1-size-size2 {
+      font-size: em($mc-h1-size-size2);
+    }
+
+    @if $mc-h1-lh-size2 {
+      line-height: em($mc-h1-lh-size2);
+    }
+
+    @if $mc-h1-pad-size2 {
+      padding: $mc-h1-pad-size2;
+    }
+
+    @if $mc-h1-mar-size2 {
+      margin: $mc-h1-mar-size2;
+    }
+  }
+
+  @include tablet {
+    @if $mc-h1-size-size3 {
+      font-size: em($mc-h1-size-size3);
+    }
+
+    @if $mc-h1-lh-size3 {
+      line-height: em($mc-h1-lh-size3);
+    }
+
+    @if $mc-h1-pad-size3 {
+      padding: $mc-h1-pad-size3;
+    }
+
+    @if $mc-h1-mar-size3 {
+      margin: $mc-h1-mar-size3;
+    }
+  }
+}
+
+@mixin mc-h2 {
+  font-family: $primaryFontStack;
+
+  @if $mc-h2-size {
+    font-size: em($mc-h2-size);
+  }
+
+  @if $mc-h2-fw {
+    font-weight: $mc-h2-fw;
+  }
+
+  @if $mc-h2-lh {
+    line-height: em($mc-h2-lh);
+  }
+
+  @if $mc-h2-pad {
+    padding: $mc-h2-pad;
+  }
+
+  @if $mc-h2-mar {
+    margin: $mc-h2-mar;
+  }
+
+  @include desktop {
+    @if $mc-h2-size-size2 {
+      font-size: em($mc-h2-size-size2);
+    }
+
+    @if $mc-h2-lh-size2 {
+      line-height: em($mc-h2-lh-size2);
+    }
+
+    @if $mc-h2-pad-size2 {
+      padding: $mc-h2-pad-size2;
+    }
+
+    @if $mc-h2-mar-size2 {
+      margin: $mc-h2-mar-size2;
+    }
+  }
+
+  @include tablet {
+    @if $mc-h2-size-size3 {
+      font-size: em($mc-h2-size-size3);
+    }
+
+    @if $mc-h2-lh-size3 {
+      line-height: em($mc-h2-lh-size3);
+    }
+
+    @if $mc-h2-pad-size3 {
+      padding: $mc-h2-pad-size3;
+    }
+
+    @if $mc-h2-mar-size3 {
+      margin: $mc-h2-mar-size3;
+    }
+  }
+}
+
+
+@mixin mc-h3 {
+  font-family: $primaryFontStack;
+
+  @if $mc-h3-size {
+    font-size: em($mc-h3-size);
+  }
+
+  @if $mc-h3-fw {
+    font-weight: $mc-h3-fw;
+  }
+
+  @if $mc-h3-lh {
+    line-height: em($mc-h3-lh);
+  }
+
+  @if $mc-h3-pad {
+    padding: $mc-h3-pad;
+  }
+
+  @if $mc-h3-mar {
+    margin: $mc-h3-mar;
+  }
+
+  @include desktop {
+    @if $mc-h3-size-size2 {
+      font-size: em($mc-h3-size-size2);
+    }
+
+    @if $mc-h3-lh-size2 {
+      line-height: em($mc-h3-lh-size2);
+    }
+
+    @if $mc-h3-pad-size2 {
+      padding: $mc-h3-pad-size2;
+    }
+
+    @if $mc-h3-mar-size2 {
+      margin: $mc-h3-mar-size2;
+    }
+  }
+
+  @include tablet {
+    @if $mc-h3-size-size3 {
+      font-size: em($mc-h3-size-size3);
+    }
+
+    @if $mc-h3-lh-size3 {
+      line-height: em($mc-h3-lh-size3);
+    }
+
+    @if $mc-h3-pad-size3 {
+      padding: $mc-h3-pad-size3;
+    }
+
+    @if $mc-h3-mar-size3 {
+      margin: $mc-h3-mar-size3;
+    }
+  }
+}
+
+
+@mixin mc-h4 {
+  font-family: $primaryFontStack;
+
+  @if $mc-h4-size {
+    font-size: em($mc-h4-size);
+  }
+
+  @if $mc-h4-fw {
+    font-weight: $mc-h4-fw;
+  }
+
+  @if $mc-h4-lh {
+    line-height: em($mc-h4-lh);
+  }
+
+  @if $mc-h4-pad {
+    padding: $mc-h4-pad;
+  }
+
+  @if $mc-h4-mar {
+    margin: $mc-h4-mar;
+  }
+
+  @include desktop {
+    @if $mc-h4-size-size2 {
+      font-size: em($mc-h4-size-size2);
+    }
+
+    @if $mc-h4-lh-size2 {
+      line-height: em($mc-h4-lh-size2);
+    }
+
+    @if $mc-h4-pad-size2 {
+      padding: $mc-h4-pad-size2;
+    }
+
+    @if $mc-h4-mar-size2 {
+      margin: $mc-h4-mar-size2;
+    }
+  }
+
+  @include tablet {
+    @if $mc-h4-size-size3 {
+      font-size: em($mc-h4-size-size3);
+    }
+
+    @if $mc-h4-lh-size3 {
+      line-height: em($mc-h4-lh-size3);
+    }
+
+    @if $mc-h4-pad-size3 {
+      padding: $mc-h4-pad-size3;
+    }
+
+    @if $mc-h4-mar-size3 {
+      margin: $mc-h4-mar-size3;
+    }
+  }
+}
+
+@mixin mc-h5 {
+  font-family: $primaryFontStack;
+
+  @if $mc-h5-size {
+    font-size: em($mc-h5-size);
+  }
+
+  @if $mc-h5-fw {
+    font-weight: $mc-h5-fw;
+  }
+
+  @if $mc-h5-lh {
+    line-height: em($mc-h5-lh);
+  }
+
+  @if $mc-h5-pad {
+    padding: $mc-h5-pad;
+  }
+
+  @if $mc-h5-mar {
+    margin: $mc-h5-mar;
+  }
+
+  @include desktop {
+    @if $mc-h5-size-size2 {
+      font-size: em($mc-h5-size-size2);
+    }
+
+    @if $mc-h5-lh-size2 {
+      line-height: em($mc-h5-lh-size2);
+    }
+
+    @if $mc-h5-pad-size2 {
+      padding: $mc-h5-pad-size2;
+    }
+
+    @if $mc-h5-mar-size2 {
+      margin: $mc-h5-mar-size2;
+    }
+  }
+
+  @include tablet {
+    @if $mc-h5-size-size3 {
+      font-size: em($mc-h5-size-size3);
+    }
+
+    @if $mc-h5-lh-size3 {
+      line-height: em($mc-h5-lh-size3);
+    }
+
+    @if $mc-h5-pad-size3 {
+      padding: $mc-h5-pad-size3;
+    }
+
+    @if $mc-h5-mar-size3 {
+      margin: $mc-h5-mar-size3;
+    }
+  }
+}
+
+
+@mixin mc-h6 {
+  font-family: $primaryFontStack;
+
+  @if $mc-h6-size {
+    font-size: em($mc-h6-size);
+  }
+
+  @if $mc-h6-fw {
+    font-weight: $mc-h6-fw;
+  }
+
+  @if $mc-h6-lh {
+    line-height: em($mc-h6-lh);
+  }
+
+  @if $mc-h6-pad {
+    padding: $mc-h6-pad;
+  }
+
+  @if $mc-h6-mar {
+    margin: $mc-h6-mar;
+  }
+
+  @include desktop {
+    @if $mc-h6-size-size2 {
+      font-size: em($mc-h6-size-size2);
+    }
+
+    @if $mc-h6-lh-size2 {
+      line-height: em($mc-h6-lh-size2);
+    }
+
+    @if $mc-h6-pad-size2 {
+      padding: $mc-h6-pad-size2;
+    }
+
+    @if $mc-h6-mar-size2 {
+      margin: $mc-h6-mar-size2;
+    }
+  }
+
+  @include tablet {
+    @if $mc-h6-size-size3 {
+      font-size: em($mc-h6-size-size3);
+    }
+
+    @if $mc-h6-lh-size3 {
+      line-height: em($mc-h6-lh-size3);
+    }
+
+    @if $mc-h6-pad-size3 {
+      padding: $mc-h6-pad-size3;
+    }
+
+    @if $mc-h6-mar-size3 {
+      margin: $mc-h6-mar-size3;
+    }
+  }
+}
+
+
+@mixin main-paragraph {
+  font-family: $primaryFontStack;
+
+  @if $paragraph {
+    font-size: em($paragraph);
+  }
+
+  @if $paragraph-fw {
+    font-weight: $paragraph-fw;
+  }
+
+  @if $paragraph-lh {
+    line-height: em($paragraph-lh);
+  }
+
+  a {
+    color: $primary_link;
+    position: relative;
+
+    &:hover {
+      color: $primary_hover;
+    }
+
+    &::before {
+      @include animated-underline;
+    }
+
+    &:hover::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+
+  @include desktop {
+    @if $paragraph-size2 {
+      font-size: em($paragraph-size2);
+    }
+
+    @if $paragraph-lh-size2 {
+      line-height: em($paragraph-lh-size2);
+    }
+  }
+
+  @include tablet {
+    @if $paragraph-size3 {
+      font-size: em($paragraph-size3);
+    }
+
+    @if $paragraph-lh-size3 {
+      line-height: em($paragraph-lh-size3);
+    }
+  }
+}
+
+@mixin fineprint-paragraph {
+  color: $paragraph-fineprint-color !important;
+  font-family: $paragraph-fineprint !important;
+  font-size: em($paragraph-fineprint) !important;
+  font-style: $paragraph-fineprint-style !important;
+  line-height: em($paragraph-fineprint-lh) !important;
+}
+
+
+@mixin promo-paragraph {
+  font-family: $primaryFontStack;
+
+  @if $promo-paragraph {
+    font-size: em($promo-paragraph);
+  }
+
+  @if $promo-paragraph-fw {
+    font-weight: $promo-paragraph-fw;
+  }
+
+  @if $promo-paragraph-lh {
+    line-height: em($promo-paragraph-lh);
+  }
+
+  @include desktop {
+    @if $promo-paragraph-size2 {
+      font-size: em($promo-paragraph-size2);
+    }
+
+    @if $promo-paragraph-lh-size2 {
+      line-height: em($promo-paragraph-lh-size2);
+    }
+  }
+
+  @include tablet {
+    @if $promo-paragraph-size3 {
+      font-size: em($promo-paragraph-size3);
+    }
+
+    @if $promo-paragraph-lh-size3 {
+      line-height: em($promo-paragraph-lh-size3);
+    }
+  }
+}
+
+@mixin promo-paragraph-mlink {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: em($promo-paragraph-i) !important;
+    margin-left: 2px;
+  }
+}
+
+@mixin p-threequarter {
+  width: 85%;
+
+  @include desktop {
+    width: 85%;
+  }
+
+  @include phonewide {
+    width: 100%;
+  }
+}
+
+@mixin p-onehalf {
+  width: 50%;
+
+  @include desktop {
+    width: 50%;
+  }
+
+  @include phonewide {
+    width: 100%;
+  }
+}
+
+@mixin p-centered {
+  text-align: center;
+
+  @include push--auto;
+}
+
+@mixin main-paragraph-mlink {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: em($paragraph-i) !important;
+  }
+}

@@ -1,0 +1,38 @@
+/** Endowments */
+section.endowment-funds {
+  display: inline-block;
+  padding: 20px 0 40px 0;
+  width: 100%;
+
+  @include touch {
+    padding: 10px 0 20px 0;
+  }
+}
+
+
+section.endowment-mblock {
+  background-color: #472146;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  position: relative;
+  top: 10px;
+
+  h3 {
+    color: #fff;
+
+    span {
+      font-size: em(32);
+      position: relative;
+      top: 8px;
+    }
+  }
+
+  .medium-subtitle {
+    font-size: em(22);
+  }
+
+  p {
+    color: #fff;
+  }
+}

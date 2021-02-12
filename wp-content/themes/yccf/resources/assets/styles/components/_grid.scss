@@ -1,0 +1,14 @@
+/** Grid styles */
+.is-widescreen {
+  width: $is-widescreen !important;
+}
+
+.columns {
+  margin: auto;
+  max-width: $maxwidth-cols;
+}
+
+// .two-column-reversed {
+//   display: flex;
+//   flex-direction: column-reverse;
+// }

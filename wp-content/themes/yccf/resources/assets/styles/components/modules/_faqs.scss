@@ -1,0 +1,90 @@
+/** FAQs */
+section.faq-block {
+  margin-bottom: 45px;
+  padding-top: 20px;
+
+  .toggle {
+    &:last-child {
+      //border-bottom: 1px solid $primary-divirder_color;
+    }
+
+    .toggle-title {
+      border: 1px solid $primary-divirder_color;
+      display: block;
+      font-weight: $bold;
+      position: relative;
+      margin-bottom: 7px;
+    }
+
+    /* formerly h3 */
+    .title {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 1;
+      margin: 0;
+    }
+  }
+
+  .toggle-inner {
+    display: none;
+    margin: -7px 0 6px;
+    padding: 7px 25px 10px 5px;
+
+    div {
+      max-width: 100%;
+    }
+  }
+
+  .toggle-title {
+    .title-name {
+      color: $paragraph-color;
+      display: block;
+      font-weight: 400;
+      padding: 25px 25px 20px 10px;
+    }
+
+    a i {
+      font-size: 22px;
+      margin-right: 5px;
+    }
+
+    i {
+      color: $paragraph-color;
+      position: absolute;
+      background: url('../images/plus-minus.png') 0 0 no-repeat;
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease;
+      margin: 20px;
+      right: 0;
+    }
+
+    &.active i {
+      background: url('../images/plus-minus.png') 0 -24px no-repeat;
+    }
+  }
+
+  ul {
+    padding-top: 10px;
+
+    li {
+      a {
+        color: $primary_link;
+        font-weight: 400;
+        margin-left: 5px;
+
+        &.more-after {
+          [class^="icon-"],
+          [class*=" icon-"] {
+            margin-left: 5px;
+          }
+        }
+
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
+}

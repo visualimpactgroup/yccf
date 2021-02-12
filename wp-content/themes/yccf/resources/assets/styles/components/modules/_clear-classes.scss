@@ -1,0 +1,18 @@
+/** Clear Classes */
+hr.cb {
+  background: transparent;
+  border: 0 solid transparent;
+  clear: both;
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+hr.dotted {
+  border-top: 1px dotted $table-foot-cell-color;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  margin: 5px auto 15px;
+  width: 100%;
+}

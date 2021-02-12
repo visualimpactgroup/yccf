@@ -1,0 +1,158 @@
+.main-content {
+  background: $white;
+
+  h1 {
+    @include mc-h1;
+  }
+
+  h2 {
+    color: $primary_link;
+
+    @include mc-h2;
+
+    strong {
+      color: $primary_link;
+    }
+  }
+
+  h3 {
+    color: $primary_link;
+
+    @include mc-h3;
+  }
+
+  h4 {
+    color: $primary_link;
+
+    @include mc-h4;
+  }
+
+  h5 {
+    @include mc-h5;
+  }
+
+  h6 {
+    @include mc-h6;
+  }
+
+  p {
+    color: $paragraph-color;
+    padding: 0 0 10px 0;
+
+    @include main-paragraph;
+
+    @include phonewide {
+      clear: both;
+    }
+  }
+
+  .alignright {
+    float: right;
+    padding: 10px 0 10px 20px;
+
+    @include phonewide {
+      display: block;
+      float: left;
+      padding: 10px 0 0 0;
+
+      @include clearfix;
+    }
+  }
+
+  .wp-caption {
+    img {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    .wp-caption-text {
+      color: $primary_link;
+      font-size: em(14);
+      text-align: center;
+
+      strong {
+        color: $primary_link;
+      }
+    }
+  }
+
+  a.more,
+  a.more-link {
+    @include main-paragraph-mlink;
+
+    color: #666 !important;
+
+    &:hover {
+      color: $primary_link !important;
+    }
+  }
+
+  a.more {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      margin-left: 2px;
+    }
+  }
+
+  a.more-link.before-icon {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      margin-right: 5px;
+    }
+  }
+
+  @include strong-para;
+
+  .ft-img {
+    margin-bottom: 40px;
+  }
+}
+
+
+.sidebutton {
+  background: $yccf_green;
+  color: #fff;
+  font-size: em(16);
+  height: 50px;
+  margin-top: 15%;
+  padding: 10px 15px;
+  position: fixed;
+  right: -45px;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  z-index: 1;
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: 14px;
+    padding-right: 5px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  &:hover {
+    background: $yccf_blue;
+    color: #fff;
+  }
+
+  &.emb-btn {
+    right: -65px;
+  }
+}
+
+.video-link {
+  border: 1px solid #ccc;
+  padding: 5px;
+
+  &:hover {
+    border-color: $primary_link;
+  }
+}
+
+img.alignright {
+  margin-left: 20px;
+}

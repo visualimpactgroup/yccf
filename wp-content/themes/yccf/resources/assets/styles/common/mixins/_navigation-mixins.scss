@@ -1,0 +1,224 @@
+/* TopTier Mixin */
+@mixin toptier {
+  font-family: $primaryFontStack;
+
+  @if $top-tier-size {
+    font-size: em($top-tier-size);
+  }
+
+  @if $top-tier-color {
+    color: $top-tier-color;
+  }
+
+  @if $top-tier-weight {
+    font-weight: $top-tier-weight;
+  }
+
+  @if $top-tier-lineheight {
+    line-height: $top-tier-lineheight;
+  }
+
+  @if $top-tier-align {
+    text-align: $top-tier-align;
+  }
+
+  a {
+    color: $top-tier-color;
+
+    &:hover,
+    &:focus {
+      color: $top-tier-color_hover !important;
+    }
+  }
+
+  @include widescreen {
+    @if $top-tier-size-size2 {
+      font-size: em($top-tier-size-size2);
+    }
+
+    @if $top-tier-lineheight-size2 {
+      line-height: $top-tier-lineheight-size2;
+    }
+  }
+}
+
+
+
+/* Main Nav Mixin */
+@mixin mainnav {
+  font-family: $primaryFontStack;
+
+  @if $main-nav-size {
+    font-size: em($main-nav-size);
+  }
+
+  @if $main-nav-color {
+    color: $main-nav-color;
+  }
+
+  @if $main-nav-weight {
+    font-weight: $main-nav-weight;
+  }
+
+  @if $main-nav-lineheight {
+    line-height: $main-nav-lineheight;
+  }
+
+  @if $main-nav-fontweight {
+    font-weight: $main-nav-fontweight;
+  }
+
+  @if $main-nav-align {
+    text-align: $main-nav-align;
+  }
+
+  @if $main-nav-transform {
+    text-transform: $main-nav-transform;
+  }
+
+  a {
+    color: $main-nav-color;
+
+    &:hover,
+    &:focus {
+      color: $main-nav-color_hover !important;
+    }
+  }
+
+  @include fullhd {
+    @if $main-nav-size-size2 {
+      font-size: em($main-nav-size-size2);
+    }
+
+    @if $main-nav-lineheight-size2 {
+      line-height: $main-nav-lineheight-size2;
+    }
+  }
+
+  @include widescreen {
+    @if $main-nav-size-size3 {
+      font-size: em($main-nav-size-size3);
+    }
+
+    @if $main-nav-lineheight-size3 {
+      line-height: $main-nav-lineheight-size3;
+    }
+  }
+}
+
+/* Footer Nav Mixin */
+@mixin footernav {
+  font-family: $primaryFontStack;
+
+  @if $footer-nav-size {
+    font-size: em($footer-nav-size);
+  }
+
+  @if $footer-nav-color {
+    color: $footer-nav-color;
+  }
+
+  @if $main-nav-weight {
+    font-weight: $footer-nav-weight;
+  }
+
+  @if $footer-nav-lineheight {
+    line-height: $footer-nav-lineheight;
+  }
+
+  @if $footer-nav-align {
+    text-align: $footer-nav-align;
+  }
+
+  @if $footer-text-weight {
+    font-weight: $footer-text-weight;
+  }
+
+  @if $footer-text-transform {
+    text-transform: $footer-text-transform;
+  }
+
+  a {
+    color: $footer-nav-color;
+
+    &:hover,
+    &:focus {
+      color: $footer-nav-color_hover !important;
+    }
+  }
+
+  @include desktop {
+    @if $footer-nav-size-size2 {
+      font-size: em($footer-nav-size-size2);
+    }
+
+    @if $footer-nav-lineheight-size2 {
+      line-height: $footer-nav-lineheight-size2;
+    }
+  }
+
+  @include phonewide {
+    @if $footer-nav-size-size3 {
+      font-size: em($footer-nav-size-size3);
+    }
+
+    @if $footer-nav-lineheight-size3 {
+      line-height: $footer-nav-lineheight-size3 !important;
+    }
+  }
+}
+
+
+/* Copyright Nav Mixin */
+@mixin copyrightnav {
+  font-family: $primaryFontStack;
+
+  @if $copyrightnav-size {
+    font-size: em($copyrightnav-size);
+  }
+
+  @if $copyrightnav-color {
+    color: $copyrightnav-color;
+  }
+
+  @if $copyrightnav-weight {
+    font-weight: $copyrightnav-weight;
+  }
+
+  @if $copyrightnav-lineheight {
+    line-height: $copyrightnav-lineheight;
+  }
+
+  @if $copyrightnav-align {
+    text-align: $copyrightnav-align;
+  }
+
+  a {
+    color: $copyrightnav-color;
+
+    &:hover,
+    &:focus {
+      color: $copyrightnav-color_hover !important;
+    }
+  }
+
+  @include desktop {
+    @if $copyrightnav-size-size2 {
+      font-size: em($copyrightnav-size-size2);
+    }
+
+    @if $copyrightnav-lineheight-size2 {
+      line-height: $copyrightnav-lineheight-size2;
+    }
+  }
+
+  @include phonewide {
+    @if $copyrightnav-size-size3 {
+      font-size: em($copyrightnav-size-size3);
+    }
+
+    @if $copyrightnav-lineheight-size3 {
+      line-height: $copyrightnav-lineheight-size3;
+    }
+  }
+}

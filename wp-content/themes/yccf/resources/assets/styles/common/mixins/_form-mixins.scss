@@ -1,0 +1,24 @@
+/** Form Mixins */
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+}
+
+/** Placeholders */
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &:-webkit-input-placeholder { @content; }
+}
+
+input,
+textarea {
+  @include input-placeholder {
+    color: $placeholder-color;
+  }
+}

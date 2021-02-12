@@ -1,0 +1,326 @@
+.site-bar {
+  background: #f1f0f0;
+  height: 45px;
+  overflow: hidden;
+
+  @include widescreen {
+    height: 40px;
+  }
+
+  .site-block {
+    position: relative;
+    top: -8px;
+
+    &.active {
+      display: block;
+      max-width: 200px;
+
+      @include widescreen {
+        max-width: 150px;
+      }
+
+      img {
+        display: inline-block;
+        position: relative;
+        top: 3px;
+      }
+
+      &::after {
+        @include triangle(bottom,$yccf_blue,7px);
+
+        display: block;
+        height: 20px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: -6px;
+        width: 8px;
+      }
+    }
+  }
+
+  .img-menu {
+    float: right;
+
+    ul {
+      display: inline-block;
+      float: right;
+
+      li {
+        display: inline-block;
+        margin-left: 30px;
+        position: relative;
+        top: -6px;
+
+        @include widescreen {
+          margin-left: 5px;
+        }
+
+        a {
+          &:hover,
+          &:focus {
+            &::after {
+              @include triangle(bottom,$yccf_blue,7px);
+
+              display: block;
+              height: 20px;
+              left: 0;
+              margin: 0 auto;
+              position: absolute;
+              right: 0;
+              text-align: center;
+              top: -8px;
+              width: 8px;
+            }
+          }
+
+          @include widescreen {
+            img {
+              max-width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  background: rgba(255, 255, 255, 0.85);
+  border-top: 1px solid #fff;
+  display: block;
+  padding: 2px 0 15px 0;
+  position: relative;
+  width: 100%;
+  z-index: 20;
+
+  @include widescreen {
+    padding: 2px 0 10px 0;
+  }
+
+  @include touch {
+    position: relative;
+  }
+
+  .brand {
+    display: block;
+    position: relative;
+    left: -10px;
+    top: 5px;
+
+    @include minimaxx {
+      top: 7px;
+    }
+
+    @include touch {
+      top: 5px;
+    }
+  }
+
+  /* nav items */
+  nav.top-tier {
+    float: right;
+    margin: -5px 0 0 0;
+    text-align: right;
+
+    .menu-top-tier-container {
+      display: inline-block;
+      float: right;
+      margin-right: -5px;
+
+      li {
+        @extend .nav-item;
+
+        border-left: $top-tier-borderleft;
+        border-right: $top-tier-borderright;
+        display: inline-block;
+        margin: 0 4px 0 0;
+        padding: 0 6px 0 0;
+
+        @include toptier;
+
+        a {
+          display: inline-block;
+          font-weight: 400;
+
+          [class^="icon-"],
+          [class*=" icon-"] {
+            float: left;
+            margin-right: 2px;
+            position: relative;
+            top: 1px;
+          }
+        }
+
+        &:last-of-type {
+          border-left: $top-tier-borderleft-last;
+          border-right: $top-tier-borderright-last;
+          margin-right: 0;
+        }
+      }
+    }
+
+    /* search trigger */
+    .search-trigger {
+      color: $search-trigger-color;
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      height: 25px;
+      margin-left: 7px;
+      position: relative;
+      top: 2px;
+      width: 20px;
+
+      &:hover,
+      &:focus {
+        color: $search-trigger-color_hover;
+
+        [class^="icon-"] {
+          color: $search-trigger-color_hover;
+        }
+      }
+    }
+  }
+
+  /* main nav */
+  .nav-primary {
+    clear: both;
+    display: block;
+    float: right;
+    margin-top: 15px;
+
+    @include fullhd {
+      margin-top: 10px;
+    }
+
+    .menu-main-nav-container {
+      display: inline-block;
+
+      .main-nav {
+        display: inline-block;
+        float: right;
+        margin: 0;
+        text-align: right;
+
+        li {
+          @extend .nav-item;
+
+          border-left: $main-nav-borderleft;
+          border-right: $main-nav-borderright;
+          display: inline-block;
+          margin: 0 15px 0 0;
+          padding: 0;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          @include mainnav;
+
+          a {
+            display: inline-block;
+            font-weight: 400;
+            position: relative;
+          }
+
+          &.menu-item-has-children,
+          &.activated {
+            a {
+              transition: none !important;
+            }
+          }
+
+          &.activated {
+            a:first-of-type {
+              color: #ff6023 !important;
+            }
+
+            ul.sub-menu {
+              li {
+                a {
+                  color: $primary_link !important;
+                }
+              }
+            }
+          }
+
+          &:hover > ul.sub-menu {
+            visibility: visible;
+            transition-delay: 0s;
+          }
+
+          ul.sub-menu {
+            background: #fff;
+            position: absolute;
+            margin-top: 10px;
+            box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, 0.1);
+            visibility: hidden;
+            transition: 0.1s 0.1s;
+
+            &::before {
+              @include triangle(top,#fff,8px);
+
+              display: block;
+              height: 20px;
+              margin: 0 auto;
+              position: absolute;
+              text-align: center;
+              top: -20px;
+              width: 8px;
+            }
+
+            li {
+              border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+              display: block;
+              float: none;
+              font-size: em(14);
+              position: relative;
+              text-transform: capitalize;
+              width: 100%;
+
+              &:last-of-type {
+                border-bottom: 0;
+              }
+
+              a {
+                color: $primary_link !important;
+                display: block;
+                padding: 10px 5px 10px 10px;
+                width: 100%;
+
+                &:hover,
+                &:focus {
+                  color: #ff6023 !important;
+                }
+              }
+            }
+
+            &.open {
+              visibility: visible;
+            }
+          }
+        }
+
+        li#menu-item-71256 {
+          a { color: #ff6023 !important; }
+        }
+      }
+    }
+
+    .main-cta {
+      @include headerButton;
+
+      position: relative;
+      top: -7px;
+    }
+  }
+
+  .flx-pos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

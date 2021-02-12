@@ -1,0 +1,105 @@
+/** button setup */
+.btn,
+button.btn {
+  display: inline-block;
+  text-align: center;
+}
+
+a.Styled,
+a.more.Styled,
+.button-block a.more.Styled,
+.Styled,
+.form-classes button.styled,
+input.buttons[type="submit"] {
+  display: inline-block;
+
+  @include subCTA;
+
+  &:first-of-type {
+    background: $btn_primary-background;
+    border: $btn_primary-bordersize $btn_primary-bordercolor;
+    color: $btn_primary-fontcolor !important;
+
+    &:hover,
+    &:focus {
+      background: $btn_primary-background_hover;
+      border: $btn_primary-bordersize $btn_primary-bordercolor_hover;
+      color: $btn_primary-fontcolor_hover !important;
+    }
+  }
+
+  &:nth-of-type(2) {
+    background: $btn_secondary-background;
+    border: $btn_secondary-bordersize $btn_secondary-bordercolor;
+    color: $btn_secondary-fontcolor !important;
+
+    &:hover,
+    &:focus {
+      background: $btn_secondary-background_hover;
+      border: $btn_secondary-bordersize $btn_primary-bordercolor_hover;
+      color: $btn_secondary-fontcolor_hover !important;
+    }
+  }
+
+  @include phonewide {
+    padding: 13px 18px 8px 18px;
+  }
+}
+
+a.more.Basic,
+a.more,
+a.more-link {
+  color: $more-color;
+
+  &:hover,
+  &:focus {
+    color: $moreBasic_hover !important;
+  }
+}
+
+.form-classes button.secondary {
+  @include subCTA;
+
+  background: $btn_secondary-background;
+  border: $btn_secondary-bordersize $btn_secondary-bordercolor;
+  color: $btn_secondary-fontcolor;
+
+  &:hover,
+  &:focus {
+    background: $btn_secondary-background_hover;
+    border: $btn_secondary-bordersize $btn_primary-bordercolor_hover;
+    color: $btn_secondary-fontcolor_hover;
+  }
+
+  @include phonewide {
+    padding: 13px 18px 8px 18px;
+  }
+}
+
+/** Dual Buttons */
+.button-block {
+  padding-top: 10px;
+
+  @include phonewide {
+    margin-bottom: 15px;
+
+    a.more.Styled {
+      display: block;
+      margin: 0 0 10px 0;
+      text-align: center;
+    }
+  }
+
+  a,
+  button,
+  .btn {
+    margin-bottom: 20px;
+    margin-right: 25px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @include button-block;
+}

@@ -1,0 +1,174 @@
+/** Footer */
+footer.footer-block {
+  background: $white;
+  border-bottom: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
+  padding: 15px 0 10px 0;
+  position: relative;
+  z-index: 10;
+
+  .footer-logo {
+    display: block;
+    max-width: 300px;
+    padding-bottom: 15px;
+    width: 100%;
+
+    img {
+      display: inline-block;
+    }
+  }
+
+  .cinfo {
+    color: $yccf_blue;
+    font-weight: $semibold;
+    text-transform: uppercase;
+
+    li {
+      font-size: em(14);
+      margin-bottom: 5px;
+
+      div {
+        line-height: 24px;
+      }
+    }
+  }
+
+  .footer-title {
+    color: $primary_link;
+    font-size: em(18);
+    font-weight: 400;
+    margin-top: 3px;
+    text-transform: uppercase;
+  }
+
+  .office {
+    color: $yccf_blue;
+    display: block;
+    font-size: em(18);
+    font-weight: 600;
+    position: relative;
+    top: 3px;
+
+    @include phonewide {
+      margin-bottom: 15px;
+      top: 0;
+    }
+
+    span {
+      color: $yccf_blue;
+      display: block;
+      font-size: 14px;
+      font-weight: 200;
+      padding: 0;
+      text-transform: uppercase;
+    }
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      font-size: em(14);
+      margin-right: 3px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  nav.explore {
+    ul {
+      margin-left: 0;
+
+      li {
+        display: inline-block;
+        padding-bottom: 2px;
+        width: 48%;
+
+        @include footernav;
+      }
+    }
+  }
+
+  .enewsletter-signup {
+    p {
+      font-size: 15px !important;
+      padding-bottom: 10px;
+      padding-top: 12px;
+    }
+  }
+}
+
+.copyright {
+  background: #fff;
+  border-top: 1px solid #f1f1f1;
+  color: #9d9da0;
+  display: inline-block;
+  text-align: left !important;
+  padding: 10px 0 15px 0;
+  width: 100%;
+
+  span {
+    @include copyrightnav;
+  }
+
+  nav.copyright-menu {
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+
+    ul {
+      display: inline-block;
+
+      li {
+        @extend .nav-item;
+
+        @include copyrightnav;
+
+        border-left: $copyrightnav-borderleft;
+        border-right: $copyrightnav-borderright;
+        display: inline-block;
+        margin: 0 4px 0 0;
+        padding: 0 6px 0 0;
+
+        a {
+          display: inline-block;
+
+          &:hover,
+          &:focus {
+            color: #b4b2b2;
+          }
+        }
+
+        &:last-of-type {
+          border-left: $copyrightnav-borderleft-last;
+          border-right: $copyrightnav-borderright-last;
+        }
+      }
+    }
+
+    @include tablet {
+      float: left;
+      margin-bottom: -15px;
+      position: relative;
+      text-align: left;
+      top: -25px;
+    }
+  }
+
+  .logo-blocks {
+    position: relative;
+    text-align: right;
+    top: -10px;
+
+    @include touch {
+      text-align: left;
+    }
+
+    img {
+      display: inline-block;
+      margin: 0 0 0 15px;
+
+      @include touch {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}

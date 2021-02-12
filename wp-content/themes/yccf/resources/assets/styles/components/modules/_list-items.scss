@@ -1,0 +1,140 @@
+/** List Items */
+.main-content {
+  .list-title {
+    font-size: em($paragraph);
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  ul,
+  ol {
+    @include listDefaults;
+
+    font-family: $primaryFontStack;
+    font-size: em($paragraph);
+    font-weight: $paragraph-fw;
+    line-height: em($paragraph-lh);
+
+    @include desktop {
+      @if $paragraph-size2 {
+        font-size: em($paragraph-size2);
+      }
+
+      @if $paragraph-lh-size2 {
+        line-height: em($paragraph-lh-size2);
+      }
+    }
+
+    @include phonewide {
+      @if $paragraph-size3 {
+        font-size: em($paragraph-size3);
+      }
+
+      @if $paragraph-lh-size3 {
+        line-height: em($paragraph-lh-size3);
+      }
+    }
+
+    ul {
+      display: block;
+      font-size: 100%;
+      margin-bottom: 5px;
+    }
+  }
+
+  ol {
+    margin-left: 17px;
+  }
+
+  .content ul.empty-list-type,
+  ul.empty-list-type,
+  .content ul,
+  .content ol.empty-list-type,
+  ol.empty-list-type,
+  .content ol,
+  .block-content ul,
+  ul {
+    @include listDefaults;
+
+    margin-left: 20px;
+
+    li {
+      color: $base-link_hover;
+
+      a {
+        color: $base-link_static;
+
+        &:hover {
+          color: $base-link_hover;
+        }
+      }
+    }
+  }
+
+  .block-content ul,
+  ul {
+    list-style-type: square;
+
+    li {
+      color: $base-list-color;
+    }
+  }
+
+  ul,
+  .content ul.empty-list-type,
+  ul.empty-list-type {
+    margin-bottom: 25px;
+  }
+
+  /* tab override */
+  .tabs {
+    ul {
+      display: flex;
+    }
+  }
+
+  ul.member-listings {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-left: 0;
+
+    li {
+      border: 1px solid $table-foot-cell-color;
+      float: left;
+      padding: 1em;
+      line-height: 24px;
+      margin: 0 2% 2% 0;
+      width: 48%;
+
+      @include tablet {
+        margin-right: 0;
+        width: 100%;
+      }
+
+      strong {
+        color: $primary_link;
+        font-weight: 500;
+      }
+    }
+  }
+
+  ul.double-list {
+    li {
+      float: left;
+      margin-right: 2%;
+      width: 46%;
+
+      @include tablet {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+ul.cinfo {
+  display: inline-block;
+  list-style: none;
+  margin: 0 0 25px 0;
+}
