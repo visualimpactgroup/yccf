@@ -1,15 +1,15 @@
 <?php
-function my_acf_google_map_api( $api ){
-	$api['key'] = 'AIzaSyBrVsSbgwd9ep-Gf7Es5z25mvB0denWxqU';
-	return $api;
-}
+// function my_acf_google_map_api( $api ){
+// 	$api['key'] = 'AIzaSyBrVsSbgwd9ep-Gf7Es5z25mvB0denWxqU';
+// 	return $api;
+// }
+//
+// add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
-add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
-
-function my_acf_init() {
-	acf_update_setting('google_api_key', 'AIzaSyBrVsSbgwd9ep-Gf7Es5z25mvB0denWxqU');
-}
+// function my_acf_init() {
+// 	acf_update_setting('google_api_key', 'AIzaSyBrVsSbgwd9ep-Gf7Es5z25mvB0denWxqU');
+// }
 
 add_action('acf/init', 'my_acf_init');
 
